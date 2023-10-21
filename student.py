@@ -1,20 +1,55 @@
-# Object-Oriented Programming #
+# Object-Oriented Programming ####
 
-import sys
+# import sys
 
 class Student:
     def __init__(self, name, house):  # __init__ is a special method that is called when an object is created.
-        if not name:
-            # sys.exit("Missing name")
-            # raise Exception("Missing name")
-            raise ValueError("Missing name")
-        if house not in ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"]:
-            raise ValueError("Invalid house")
+        # if not name:
+        #     # sys.exit("Missing name")
+        #     # raise Exception("Missing name")
+        #     raise ValueError("Missing name")
+        # if house not in ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"]:
+        #     raise ValueError("Invalid house")
         self.name = name
         self.house = house
+        # self.patronus = patronus
 
-    def __str__(self):
+    def __str__(self):  # __str__ is a special method that is called when an object is printed.
         return f'{self.name} from {self.house}'
+    
+    @property
+    def name(self):
+        return self._name
+    
+    @name.setter
+    def name(self, name):
+        if not name:
+            raise ValueError("Missing name")
+        self._name = name
+
+    # getter
+    @property
+    def house(self):
+        return self._house
+    
+    # setter
+    @house.setter
+    def house(self, house):
+        if house not in ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"]:
+            raise ValueError("Invalid house")
+        self._house = house
+    
+    # def charm(self):
+    #     match self.patronus:
+    #         case "Stage":
+    #             return "Expecto Patronum!"
+    #         case "Otter":
+    #             return "Emoji see"
+    #         case "Jack Russell Terrier":
+    #             return "dog"
+    #         case _:
+    #             return "/"
+
 
 
 # attributes is a variable that belongs to an object.
@@ -24,8 +59,13 @@ class Student:
 
 def main():
     student = get_student()
-    print(f'{student.name} from {student.house}')
+    # print(f'{student.name} from {student.house}')
+    # student.house = "Nu mber four, ..." # attribute can be changed after the object is created and method __init__.
     print(student)
+    # print("Expecto Patronum!")
+    # print(student.charm())
+    # print(student.house)
+    # print(student._house)
 
 # def main():
 #     # name, house = get_student()
@@ -78,6 +118,7 @@ def main():
 def get_student():
     name = input("Name: ")
     house = input("House: ")
+    # patronus = input("Patronus: ")
     return Student(name, house)
 
 
