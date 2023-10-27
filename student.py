@@ -17,11 +17,17 @@ class Student:
     def __str__(self):  # __str__ is a special method that is called when an object is printed.
         return f'{self.name} from {self.house}'
     
-    @property
+    @classmethod  # @classmethod
+    def get(cls):  # cls is a convention for the class itself.
+        name = input("Name: ")
+        house = input("House: ")
+        return cls(name, house)
+    
+    @property  # @property is a decorator that allows us to call a method without parentheses.
     def name(self):
         return self._name
     
-    @name.setter
+    @name.setter # @.setter is a decorator that allows us to change the value of an attribute.
     def name(self, name):
         if not name:
             raise ValueError("Missing name")
@@ -58,7 +64,8 @@ class Student:
 
 
 def main():
-    student = get_student()
+    # student = get_student()
+    student = Student.get()
     # print(f'{student.name} from {student.house}')
     # student.house = "Nu mber four, ..." # attribute can be changed after the object is created and method __init__.
     print(student)
