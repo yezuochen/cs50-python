@@ -8,4 +8,4 @@ The content is about:
   3. file i/o `costumes.py`, `names.py`, `students.py`
   4. regular expression `validata.ipynb`
   5. objected-orient programming `student.py`
-  6. te cetera
+  6. ET cetera
