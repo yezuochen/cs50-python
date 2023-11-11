@@ -7,5 +7,5 @@ The content is about:
   2. units test `hellow.py`, `test.py`, `tet_hello.py`
   3. file i/o `costumes.py`, `names.py`, `students.py`
   4. regular expression `validata.ipynb`
-  5. objected-orient programming `student.py`
-  6. ET cetera
+  5. objected-orient programming `student.py`, `hat.py, `type.ipynb`, `vault.py`, `wizard.py`
+  6. ET cetera `meows.py`
