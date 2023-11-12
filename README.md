@@ -8,4 +8,4 @@ The content is about:
   3. file i/o `costumes.py`, `names.py`, `students.py`
   4. regular expression `validata.ipynb`
   5. objected-orient programming `student.py`, `hat.py`, `type.ipynb`, `vault.py`, `wizard.py`
-  6. ET cetera `meows.py`, `unpack.py`, `yell.py`
+  6. ET cetera `meows.py`, `unpack.py`, `yell.py`, `gryffindor.py`, `sleep.py`, `say2.py`
